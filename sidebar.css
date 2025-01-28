@@ -1,0 +1,56 @@
+.hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+  }
+  .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: blue;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  .sidebar section{
+    color: #fff;
+  }
+  .sidebar h2, .sidebar p {
+    padding: 8px 16px;
+  }
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 36px;
+    cursor: pointer;
+    color: red;
+  }
+  .open {
+    width: 250px;
+  }
+  .trending ul li:first-child{
+    color: chartreuse;
+    font-weight: bold;
+  }
+  .trending ul li:first-child:hover{
+    background-color: #fff;
+    color: fuchsia;
+    font-family: cursive;
+  }
+  .trending ul li{
+    list-style-type: none;
+    color:white;
+    padding: 5%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+  .trending ul li:hover{
+    background-color:cornsilk;
+    color: black;
+  }

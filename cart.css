@@ -1,0 +1,143 @@
+*{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%;
+}
+.container-fluid{
+    position: relative;
+}
+.one{
+    width: 100%;
+    margin-top: 1%;
+    display: flex;
+    align-items: center;
+    background-color:rgb(238, 236, 236);
+    position: absolute;
+}
+.first{
+    width: 60%;
+    margin-top: 0%;
+}
+.second{
+    height: 100%;
+    width: 35%;
+    margin-top: 8%;
+}
+.second .order{
+    width: 100%;
+    height: fit-content;
+    text-align: center;
+    background-color: #fff;
+}
+.second .order button{
+    width: 30%;
+    border-radius: 20%;
+}
+.section {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.pair{
+    width: 100%;
+    height: 98%;
+}
+.p1{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    align-items: center;
+    padding: 0.5%;
+    /* justify-content: space-around; */
+}
+.p1 img{
+    width: 100px;
+    height: 100px;
+    /* margin-top: -44%; */
+    border-radius: 8%;
+}
+
+.item{
+    width: 100%;
+    height: 32%;
+    display: flex;
+    align-items: center;
+    padding: 0.5%;
+    /* justify-content: space-around; */
+}
+.item img{
+    width: 100%;
+    height: 100px;
+    /* margin-top: -44%; */
+    border-radius: 8%;
+}
+
+.pair{
+    border-radius: 5%;
+    background-color: #fff;
+}
+.pair .p1 .con{
+    width: 100%;
+    margin-left: 1%;
+    background-color: #f0e6e6;
+}
+.pair h3{
+    text-align: center;
+    font-family: cursive;
+}
+.con i{
+    color: orange;
+}
+.con button{
+    margin-left: 30%;
+    /* margin-top: -13%; */
+    width: 50%;
+    height: 10%;
+    border-radius: 40%;
+    font-size: medium;
+    background-color: yellow;
+}
+.dynamic-section {
+    /* Height will be dynamic based on content */
+}
+
+.fixed-section {
+    height: 150px; /* Fixed height */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: hidden; /* Disable vertical scrolling */
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none; /* Hide scrollbar on Webkit browsers */
+}
+
+.horizontal-scroll {
+    -ms-overflow-style: none;  /* Hide scrollbar on IE and Edge */
+    scrollbar-width: none;  /* Hide scrollbar on Firefox */
+}
+
+.scroll-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.product {
+    min-width: 200px;
+    height: 100%;
+    background-color: #f0f0f0;
+    margin-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+
+.item {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+}

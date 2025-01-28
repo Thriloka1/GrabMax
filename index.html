@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrabMax</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="stylesheet" href="./sidebar.css">
+    <link rel="icon" href="./images/logo.png">
+<!-- jQuery library -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-fixed-top">
+                <div class="row">
+                  <div class="col-sm-3 menu">
+                    <img src="./logo.png" alt="">
+                    <div class="img">
+                      <h3>GrabMAX</h3>
+                    </div>
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" id="searchBox" placeholder="Search vegetables , fruits & more..." onkeyup="searchImages()" >
+                  </div>
+                  <div class="col-sm-4 " >
+                      <select name="lang" id="">
+                      <option value="Telugu">Telugu</label>
+                      <option value="English" selected>English</option>
+                      <option value="Spanish">Spanish</label>
+                      <option value="Italian">Italian</option>
+                      <option value="German">German</option>
+                      <option value="French">French</option>
+                      <option value="Japanese">Japanese</option>
+                      <option value="Hindi">Hindi</option>
+                      <option value="Arabic">Arabic</option>
+                      <option value="Russian">Russian</option>
+                      <option value="Chinese">Chinese</option>
+                    </select>
+                    <button type="button" class="btn btn-info btn-md" id="myBtn">
+                      <a href="#" class="glyphicon glyphicon-user"></a>
+                      Login
+                    </button>
+                    <a id="cart" href="cart.html"><i class="fa-solid fa-cart-shopping"></i>
+                    Cart</a>
+                  </div>
+                </div>
+                <div class="row sec">
+                  <div class="container-fluid">
+                    <div id="myNavbar">
+                      <ul class="nav navbar-nav">
+                        <li>
+                          <a href="#">
+                            <div class="hamburger-menu" onclick="openMenu()">☰</div>
+                        <div id="profileSidebar" class="sidebar">
+                            <span class="close-btn" onclick="closeMenu()" style="border: 1px solid red;">×</span>
+                            <section>
+                              <h2>hello,Thriloka</h4>
+                            </section>
+                            <article>
+                              <div class="trending">
+                                <ul>
+                                  <li>Trending</li>
+                                  <li>Best Sellers</li>
+                                  <li>New Releases</li>
+                                  <li>Movers and Shakers</li>
+                                </ul>
+                              </div>
+                              <div class="trending">
+                                <ul>
+                                  <li>Digital Content and Devices</li>
+                                  <li>Returns & Orders</li>
+                                  <li>Track Orders</li>
+                                  <li>Kindle E-Readers & eBooks</li>
+                                  <li>Audible audio books</li>
+                                </ul>
+                              </div>
+                              <div class="trending">
+                                <ul>
+                                  <li>Programs & features</li>
+                                  <li>amazon pay</li>
+                                  <li>gift cards & mobile recharges</li>
+                                  <li>Amazon launchpad</li>
+                                  <li>amazon Launchpad</li>
+                                </ul>
+                              </div>
+                              <div class="trending">
+                                <ul>
+                                  <li>Help & settings</li>
+                                  <li>Your account</li>
+                                  <li>Customer Service</li>
+                                  <li>Sign Out</li>
+                                </ul>
+                              </div>
+                            </article>
+                        </div>
+                          </a>
+                        </li>
+                        <li class="active"><a href="./index.html">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Cart <span class="badge">5</span></a></li>
+                        <li><a href="#">Logout</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+        </nav>
+        <main>
+              <div class="row gallery-container">
+                <div class="gallery">
+                      <div class="column fruits">
+                        <div class="content" data-title="appricot">
+                            <img src="./apricot.jpeg" alt="apricot">
+                            <div><b>Fresh Appricot</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="apple">
+                            <img src="./apple.jpg" alt="apple">
+                          <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                        </div>
+                    </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="plum">
+                            <img src="./plum" alt="plum" >
+                            <div><b>Fresh Plum</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="pineapple">
+                            <img src="./pineapple.jpg" alt="pineapple">
+                            <div><b>Fresh PineApple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="pomegranate">
+                            <img src="./pomegranate" alt="pomegranate">
+                            <div><b>Fresh Pomegranate</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="starfruit">
+                            <img src="./star.jpg" alt="starfruit">
+                            <div><b>Fresh StarFruit</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="strawberry">
+                            <img src="./strawberry" alt="strawberry">
+                            <div><b>Fresh strawberry</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="watermelon">
+                            <img src="./watermelon" alt="watermelon">
+                            <div><b>Fresh watermelon</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="pear">
+                            <img src="./pear.jpg" alt="pear">
+                            <div><b>Fresh pear</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="melon">
+                            <img src="./melon.jpg" alt="melon">
+                            <div><b>Fresh melon</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                    </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="lichi">
+                            <img src="./lichi" alt="lichi">
+                            <div><b>Fresh lichi</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="lemon">
+                            <img src="./lemon.jpg" alt="lemon">
+                            <div><b>Fresh lemon</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="kiwi">
+                            <img src="./kiwi.jpg" alt="kiwi">
+                            <div><b>Fresh kiwi</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                    </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="grapes">
+                            <img src="./grapes" alt="grapes">
+                            <div><b>Fresh grapes</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column fruits">
+                        <div class="content" data-title="cherry">
+                            <img src="./cherry.png" alt="cherry">
+                            <div><b>Fresh cherry</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+              <div class="row gallery-container">
+                  <div class="gallery">
+                      <div class="column vegetables">
+                          <div class="content" data-title="aceva">
+                              <img src="./aceva" alt="aceva">
+                              <div><b>Fresh Aceva</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="aceva">
+                              <img src="./arugula" alt="aceva">
+                              <div><b>Fresh Arugula</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content"data-title="beans">
+                              <img src="./beans.jpg" alt="beans">
+                              <div><b>Fresh Beans</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.87</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="bitterguard">
+                              <img src="./bitterguard" alt="bitterguard">
+                              <div><b>Fresh BitterGuard</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.69</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="bokchoy">
+                              <img src="./bokchoy.jpg" alt="bokchoy">
+                              <div><b>Fresh Bokchoy</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="bottleguard">
+                              <img src="./bottleguard" alt="bottleguard">
+                              <div><b>Fresh BottleGuard</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.89</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="brinjal">
+                              <img src="./brinjal" alt="brinjal">
+                              <div><b>Fresh Brinjal</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="broccoli">
+                              <img src="./broccoli.jpg" alt="broccoli">
+                              <div><b>Fresh Broccoli</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="cabbage">
+                              <img src="./cabbage.jpg" alt="cabbage">
+                              <div><b>Fresh Cabbage</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.79</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content"  data-title="capsicum">
+                              <img src="./capsicum.jpg" alt="capsicum">
+                              <div><b>Fresh Capsicum</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="carrot">
+                              <img src="./carrot.jpg" alt="carrot">
+                              <div><b>Fresh Carrot</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="cauliflower">
+                              <img src="./cauliflower.png" alt="cauliflower">
+                              <div><b>Fresh Cauliflower</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="coriander">
+                              <img src="./corianderleaves" alt="coriander">
+                              <div><b>Fresh CorianderLeaves</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="garlic">
+                              <img src="./garlic" alt="garlic">
+                              <div><b>Fresh Garlic</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.89</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="ginger">
+                              <img src="./ginger" alt="ginger">
+                              <div><b>Fresh Ginger</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="ivyguard">
+                              <img src="./ivyguard.jpg" alt="ivyguard">
+                              <div><b>Fresh ivyguard</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.39</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="jackfruit">
+                              <img src="./jackfruit.jpg" alt="jackfruit">
+                              <div><b>Fresh JackFruit</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.109</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="kale">
+                              <img src="./kale.jpeg" alt="kale">
+                              <div><b>Fresh Kale</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.49</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="ladysfinger">
+                              <img src="./ladys.jpg" alt="ladysfinger">
+                              <div><b>Fresh Ladysfinger</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.249</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="mushroom">
+                              <img src="./mushroom" alt="mushroom">
+                              <div><b>Fresh Mushroom</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.39</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="onion">
+                              <img src="./onion.jpg" alt="onion">
+                              <div><b>Fresh Onion</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.139</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="peas">
+                              <img src="./Peas.avif" alt="peas">
+                              <div><b>Fresh Peas</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.79</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="potato" >
+                              <img src="./potato.jpg"alt="potato">
+                              <div><b>Fresh Potato</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.89</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="pumpkin">
+                              <img src="./pumpkin.jpg" alt="pumpkin">
+                              <div><b>Fresh Pumpkin</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.39</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="radish">
+                              <img src="./radish" alt="radish">
+                              <div><b>Fresh Radish</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.45</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="rawbanana">
+                              <img src="./rawbanana" alt="rawbanana">
+                              <div><b>Fresh Raw Banana</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.74</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="redchilli">
+                              <img src="./redchilli" alt="redchilli">
+                              <div><b>Fresh Red Chilli</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.119</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="spinach">
+                              <img src="./spinach" alt="spinach">
+                              <div><b>Fresh Spinach</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.57</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="tomato">
+                              <img src="./tomato.jpg" alt="tomato">
+                              <div><b>Fresh Tomato</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.89</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                        <div class="column vegetables">
+                          <div class="content" data-title="watercress">
+                              <img src="./watercress.jpg" alt="watercress">
+                              <div><b>Fresh Water Melon</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                  <br><b>Rs.73</b>
+                                  <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                  <button >Add to cart</button>
+                          </div>
+                        </div>
+                  </div>
+              </div>
+              <div class="row gallery-container">
+                <div class="gallery">
+                  <div class="column pulses">
+                    <div class="content" data-title="adukibeans">
+                        <img src="./adukibeans.jpg" alt="adukibeans">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="barley">
+                        <img src="./barley.jpg" alt="barley">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="blackmustardseeds">
+                        <img src="./black-mustard-seeds.jpg" alt="blackmustardseeds">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="brownrice">
+                        <img src="./brownrice.jpg" alt="brownrice">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="buckwhite">
+                        <img src="./buckwheat.jpg" alt="buckwheat">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="bulgur">
+                        <img src="./bulgur.jpg" alt="bulgur">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="chickpeas">
+                        <img src="./chickpeas.jpg" alt="chickpeas">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="clove">
+                        <img src="./clove.avif" alt="clove">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="corianderseeds">
+                        <img src="./coriander" alt="coriander">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="dillseeds">
+                        <img src="./dillseeds" alt="dillseeds">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="fonio">
+                        <img src="./fonio" alt="fonio">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="kidneybeans">
+                        <img src="./kidneybeans.jpg" alt="kidneybeans">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-title="maize">
+                        <img src="./maize.jpg" alt="maize">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                  <div class="column pulses">
+                    <div class="content" data-name="millets">
+                        <img src="./millets" alt="millets">
+                        <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                            <br><b>Rs.249</b>
+                            <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                            <button >Add to cart</button>
+                    </div>
+                  </div>
+                    <div class="column pulses">
+                        <div class="content" data-title="moongdal">
+                            <img src="./moong-dal.jpg" alt="moongdal">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="nutmeg">
+                            <img src="./nutmeg.jpg" alt="nutmeg">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="oats">
+                            <img src="./oats.jpg" alt="oats">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="redlentils">
+                            <img src="./redlentils" alt="redlentils">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="soupmix">
+                            <img src="./soupmix.jpg" alt="soupmix">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="soyabeans">
+                            <img src="./soyabeans.jpg" alt="soyabeans">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="statanise">
+                            <img src="./Star-Anise.jpg" alt="statanise">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                      <div class="column pulses">
+                        <div class="content" data-title="fenugreek">
+                            <img src="./fenugreek.jpg" alt="fenugreek">
+                            <div><b>Fresh Apple</b> Royal Gala <br>4 pieces Pack 10k+ bought <br>in past. 
+                                <br><b>Rs.249</b>
+                                <br><b>fresh</b>free delivery on orders <br>over Rs.499</div>
+                                <button >Add to cart</button>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </main>
+    </div>
+    
+    
+    <!--on click events-->
+            <!-- login form on click-->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog" style="width: 100%;height: auto;">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content" >
+                    <div class="modal-header" >
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4><span class="glyphicon glyphicon-lock"></span> Login</h4>
+                    </div>
+                <div class="modal-body">
+                    <form role="form">
+                    <div class="form-group">
+                        <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                        <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                        <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                        
+                        <input type="password" class="form-control" id="mypwd" name="psw"   placeholder="Enter password">
+                        </div>
+
+                        <label for="cb">ShowPassword</label>
+                        <input type="checkbox" onclick="myfun()">
+                    
+                        <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+                        
+                        <div class="checkbox">
+                            <label><input type="checkbox" value="" checked>Remember me</label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                    <p>Not a member? 
+                      <button type="button" class="btn btn-info btn-lg" id="myBtn1">Signup</button>
+                    </p>
+                    <p>Forgot <a href="#">Password?</a></p>
+                </div>
+                </div>
+                
+            </div>
+            </div> 
+            <div class="modal fade" id="myModal1" role="dialog" style="width: 100%;height: auto;">
+              <div class="modal-dialog">
+                  <!-- Modal content-->
+                  <div class="modal-content" >
+                      <div class="modal-header" >
+                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                          <h4><span class="glyphicon glyphicon-lock"></span> Signup</h4>
+                      </div>
+                  <div class="modal-body">
+                      <form role="form">
+                      <div class="form-group">
+                          <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+                      </div>
+                      <div class="form-group">
+                        <input type="text" class="form-control" id="usrname" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                      <input type="text" class="form-control" id="usrname" placeholder="Retype Email">
+                  </div>
+                      <div class="form-group">
+                          
+                          <input type="password" class="form-control" id="mypwd1" name="psw"   placeholder="Enter password">
+                          <br>
+                          <label for="cb">ShowPassword</label>
+                          <input type="checkbox" onclick="myfun1()">
+                          <input type="password" class="form-control" id="mypwd2" name="psw"   placeholder="Re-enter password">
+                          <label for="cb">ShowPassword</label>
+                          <input type="checkbox" onclick="myfun2()">
+                        </div>
+                      
+                          <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Signup</button>
+                          
+                          
+                      </form>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+                      
+                  </div>
+                  </div>
+                  
+              </div>
+              </div> 
+    <script src="./script.js"></script>
+    <script src="./sidebar.js"></script>
+</body>
+</html>
